@@ -59,9 +59,7 @@ from typing import overload
 from redis import Redis
 from redis import RedisError
 from redis.commands.core import Script
-# TODO: When we drop support for Python 3.7, change the following import to:
-#   from typing import Literal
-from typing_extensions import Literal
+from typing import Literal
 
 from .annotations import F
 from .base import Primitive

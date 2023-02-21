@@ -42,13 +42,9 @@ from redis import Redis
 from redis import RedisError
 from redis.asyncio import Redis as AIORedis  # type: ignore
 from redis.client import Pipeline
-# TODO: When we drop support for Python 3.7, change the following imports to:
-#   from typing import Final
-#   from typing import Protocol
-#   from typing import final
-from typing_extensions import Final
-from typing_extensions import Protocol
-from typing_extensions import final
+from typing import Final
+from typing import Protocol
+from typing import final
 
 from .annotations import JSONTypes
 from .exceptions import InefficientAccessWarning

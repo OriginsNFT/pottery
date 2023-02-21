@@ -31,8 +31,7 @@ from typing import cast
 
 import mmh3
 # TODO: When we drop support for Python 3.7, change the following import to:
-#   from typing import final
-from typing_extensions import final
+from typing import final
 
 from .annotations import F
 from .annotations import JSONTypes

@@ -33,7 +33,7 @@ from typing import cast
 
 from redis import Redis
 from redis.client import Pipeline
-from typing_extensions import Literal
+from typing import Literal
 
 from .annotations import JSONTypes
 from .base import Container

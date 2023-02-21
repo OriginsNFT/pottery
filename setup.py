@@ -21,23 +21,35 @@ import pathlib
 from setuptools import find_packages
 from setuptools import setup
 
-import pottery
+try:
+    import pottery
+except ModuleNotFoundError:
+    pass
 
+name = 'pottery'
+version = '3.1.0rc-orig6'
+description = __doc__.split(sep='\n\n', maxsplit=1)[0]
+url = 'https://github.com/brainix/pottery'
+author = 'Rajiv Bakulesh Shah'
+author_email = 'brainix@gmail.com'
+license = 'Apache 2.0'
+keywords = 'Redis client persistent storage'
+copyright = f'Copyright © 2015-2022, {__author__}, original author.'
 
 _package_dir = pathlib.Path(__file__).parent
 _long_description = (_package_dir / 'README.md').read_text()
 
 
 setup(
-    name=pottery.__name__,
-    version=pottery.__version__,
-    description=pottery.__description__,
+    name=name,
+    version=version,
+    description=description,
     long_description=_long_description,
     long_description_content_type='text/markdown',
-    url=pottery.__url__,
-    author=pottery.__author__,
-    author_email=pottery.__author_email__,
-    license=pottery.__license__,
+    url=url,
+    author=author,
+    author_email=author_email,
+    license=license,
     classifiers=[
         'License :: OSI Approved :: Apache Software License',
         'Intended Audience :: Developers',
@@ -54,9 +66,9 @@ setup(
         'Framework :: AsyncIO',
         'Typing :: Typed',
     ],
-    keywords=pottery.__keywords__,
-    python_requires='>=3.7, <4',
-    install_requires=('redis>=4.2.0rc1, <5', 'mmh3', 'typing_extensions'),
+    keywords=keywords,
+    python_requires='>=3.9, <4',
+    install_requires=('redis==4.5.1, <5', 'mmh3'),
     extras_require={},
     packages=find_packages(exclude=('contrib', 'docs', 'tests*')),
     package_data={'pottery': ('py.typed',)},

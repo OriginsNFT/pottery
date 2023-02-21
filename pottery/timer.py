@@ -29,7 +29,7 @@ from types import TracebackType
 from typing import Type
 from typing import overload
 
-from typing_extensions import Literal
+from typing import Literal
 
 
 class ContextTimer:

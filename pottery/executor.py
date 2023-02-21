@@ -25,8 +25,6 @@ from types import TracebackType
 from typing import Type
 from typing import overload
 
-from typing_extensions import Literal
-
 
 class BailOutExecutor(concurrent.futures.ThreadPoolExecutor):
     '''ThreadPoolExecutor subclass that doesn't wait for futures on .__exit__().

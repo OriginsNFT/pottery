@@ -26,13 +26,10 @@ been battle tested in production at scale.
 
 from typing import Tuple
 
-# TODO: When we drop support for Python 3.7, change the following import to:
-#   from typing import Final
-from typing_extensions import Final
-
+from typing import Final
 
 __title__: Final[str] = 'pottery'
-__version__: Final[str] = '3.0.0'
+__version__: Final[str] = '3.1.0rc-orig1'
 __description__: Final[str] = __doc__.split(sep='\n\n', maxsplit=1)[0]
 __url__: Final[str] = 'https://github.com/brainix/pottery'
 __author__: Final[str] = 'Rajiv Bakulesh Shah'
